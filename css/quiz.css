@@ -1,0 +1,100 @@
+.bg-MarioRed {
+    background-color: #e60012;
+}
+
+.quiz_main_area {
+    padding-left: 24px;
+    padding-right: 24px;
+    position: relative;
+}
+
+.quiz_frame {
+    width: 90%;
+    max-width: 1160px;
+    height: 700px;
+    background-color: white;
+    margin: 0 auto;
+
+    border-radius: 30px;
+
+    background-image: repeating-linear-gradient(-45deg, white, white 6px, #f3f1f18b 0, #f3f1f18b 12px);
+    padding: 48px 16px 32px 16px;
+}
+
+.quiz_inner {
+    margin: 0 auto;
+    width: calc(1000%/12);
+}
+
+.question_frame {
+    background-image: linear-gradient(180deg, #ffe847 29%, #eeb955 84%);
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+    aspect-ratio: 966.66/462;
+}
+
+#question_frame {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+
+}
+
+.question_frame::after {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: url(../img/pattern-items.png);
+    filter: opacity(0.8);
+    z-index: 1;
+}
+
+#bg_M {
+
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: auto;
+}
+
+#introMario {
+    object-fit: cover;
+    position: absolute;
+    top: -5%;
+    left: 28%;
+    z-index: 5;
+    height: auto;
+
+
+}
+
+@media only screen and (max-width: 1140px) {
+    .quiz_main_area {
+        /* top: -100px; */
+    }
+
+    .quiz_frame {
+        max-width: 640px;
+        padding: 16px;
+
+        height: 500px;
+    }
+
+    .quiz_inner {
+        width: 100%;
+    }
+
+    #introMario {
+        left: 32%;
+        height: 400px;
+    }
+}

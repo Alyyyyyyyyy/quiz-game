@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home of Super Mario</title>
+    <link rel="icon" href="./img/icon.ico">
+    <link rel="stylesheet" href="./css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="bg-linear-black">
+    <!-- header開始 -->
+    <div class="header bg-MarioRed">
+        <div id="logo">
+            <a href="./index.html">
+                <img src="./img/nintendo-racetrack.svg">
+            </a>
+        </div>
+
+        <div id="logIn">
+            <span><img src="./img/logIn.png"></span>&nbsp;
+            <span class="signUp text-wh">Log in / Sign up</span>
+        </div>
+
+    </div>
+
+    <div class="header_nav bg-linear-black">
+        <nav id="header_nav">
+            <button style="display:none;" id="closeMenu_btn" onclick="closeMenu()">
+                ✘
+            </button>
+
+            <ul class="navigation text-wh" id="navigation">
+
+                <li class="border-opacity">
+                    <a href="./index.html" class="h6">Home</a>
+                </li>
+
+                <li class="border-wh">
+                    <a href="./characters.html" class="h6">Characters</a>
+                </li>
+
+                <li class="border-opacity">
+                    <a href="./news.html" class="h6">News</a>
+                </li>
+
+                <li class="border-opacity">
+                    <a href="./quiz.html" class="h6">Quiz</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="switch">
+            <img src="./img/switch.svg" class="img-fluid">
+        </div>
+    </div>
+    <!-- header結束 -->
+
+    <!-- title 區域開始 -->
+    <div class="title_characters bg-blue-lime ">
+        <div class="menu_small" id="menu_small">
+            <button class="menu_small_btn text-wh" onclick="openMenu()" type="button">
+                Menu
+            </button>
+        </div>
+
+        <div class="title_fix_width">
+            <div class="character_title_img_area">
+                <img src="./img/header-luigi.png" class="header-luigi" loading="lazy">
+                <img src="./img/header-mario.png" class="header-mario">
+            </div>
+
+            <div class="character_title_text_area">
+                <p class="h1">Characters</p>
+                <p class="txt-big">
+                    From ravishing royalty to menacing monsters, the
+                    Mushroom Kingdom has had its share of memorable
+                    characters over the years…
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- title 區域結束 -->
+
+    <!-- 角色 Card 開始 -->
+    <div class="characters_frame">
+        <!-- Mario -->
+        <div class="main_mario text-wh" id="mainMario">
+            <picture>
+                <img src="./img/mario-unstack-closed.png" class="mainMarioImg img-fluid" id="mainMarioImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame">
+                <button onclick="expand('Mario')" class="main_character_btn" id="marioBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Mario</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowMario_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowMario_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="mario_introduce" style="display: none;" class="text-left">
+                    <!-- <p>
+                        The main hero of the Mushroom Kingdom.
+                        Mario is always bright and cheerful and instantly recognizable with
+                        his blue overalls, red cap, and trademark moustache.
+                    </p>
+                    <p>
+                        He's a trusted friend of Princess Peach, and he and his brother
+                        Luigi are known across the land for their acts of bravery.
+                    </p>
+                    <p>
+                        Mario excels at sports including tennis, golf, baseball, soccer, and
+                        even kart racing. He's good at all of them! He's a plumber by
+                        profession but is really a jack of all trades.
+                    </p>
+                    <p>
+                        He uses his masterful jumping ability and a variety of
+                        power-ups to take on his archrival, Bowser.
+                    </p> -->
+
+                    <p>
+                        紅色帽子配藍色吊帶工作褲，加上標誌性的鬍子。
+                        他就是永遠生氣勃勃又開朗的瑪利歐。
+                    </p>
+                    <p>
+                        瑪利歐非常喜歡碧姬公主，與雙胞胎弟弟路易吉是默契十足的好搭檔。
+                        擅長運動，不論是網球、棒球、足球還是賽車也技術了得。
+                    </p>
+                    <p>
+                        職業是水管工，但一直活躍在眾多不同地方。
+                        除了擅長的跳躍和各種力量提升外，也勇於迎戰宿敵庫巴。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Luigi -->
+        <div class="main_luigi text-wh" id="mainLuigi">
+            <picture>
+                <img src="./img/luigi-unstack-closed.png" class="img-fluid mainLuigiImg" id="mainLuigiImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_luigi">
+                <button onclick="expand('Luigi')" class="main_character_btn" id="luigiBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Luigi</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowLuigi_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowLuigi_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="luigi_introduce" style="display: none;" class="text-left">
+                    <!-- <p>
+                        Mario's brother and fellow hero of the Mushroom Kingdom.
+                        Luigi is instantly recognizable in his trademark green hat and green shirt.
+                    </p>
+
+                    <p>
+                        Luigi is kind but can be a bit nervous, especially around ghosts. However,
+                        his abilities are on par with Mario's, so when these brothers team up,
+                        there's nothing they can't achieve.
+                    </p>
+                    <p>
+                        Luigi is taller and can jump higher than Mario.
+                        If you look closely, you may also notice that the shape
+                        of his moustache is a bit different as well.
+                    </p> -->
+
+                    <p>
+                        瑪利歐的雙胞胎弟弟，性格善良又有點膽小。
+                        害怕的東西當然就是幽靈。
+                    </p>
+
+                    <p>
+                        路易吉其實擁有與瑪利歐不相伯仲的實力。
+                        只要瑪利歐和路易吉兄弟二人合力的話，便會變得非常強大。
+                    </p>
+
+                    <p>
+                        其標誌是綠色的帽子和襯衫。
+                        身高比瑪利歐稍高，仔細看的話，會發現鬍子形狀也稍有不同。
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pricess Peach -->
+        <div class="main_peach text-wh" id="mainPeach">
+            <picture>
+                <img src="./img/peach-unstack-closed.png" class="img-fluid mainPeachImg" id="mainPeachImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_peach">
+                <button onclick="expand('Peach')" class="main_character_btn" id="peachBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Pricess Peach</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowPeach_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowPeach_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="peach_introduce" style="display: none;" class="text-left">
+                    <!-- <p>
+                        The beloved princess of the Mushroom Kingdom. She's extremely kind and
+                        is always working to create a world where everyone can live together happily.
+                        Her signature pink dress is quite lovely.
+                    </p>
+
+                    <p>
+                        Princess Peach is always game for a variety of sports, and also enjoys baking and cooking.
+                    </p>
+                    <p>
+                        Princess Peach and Mario are good friends and help each other out whenever they can.
+                    </p> -->
+                    <p>
+                        蘑菇王國的公主。
+                    </p>
+                    <p>
+                        個性善良，心願是希望大家都能幸福快樂地生活。
+                        嗜好是做蛋糕和做菜，也勇於挑戰各項運動。
+                    </p>
+
+                    <p>
+                        與瑪利歐十分友好，是能互相依靠的夥伴。
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Toad -->
+        <div class="main_toad text-wh" id="mainToad">
+            <picture>
+                <img src="./img/toad-unstack-closed.png" class="img-fluid mainToadImg" id="mainToadImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_toad">
+                <button onclick="expand('Toad')" class="main_character_btn" id="toadBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Kinopio</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowToad_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowToad_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="toad_introduce" style="display: none;" class="text-left">
+                    <p>
+                        在碧姬公主身邊工作的蘑菇王國居民。
+                        還有藍色和綠色等其他顏色的夥伴，大家很有朝氣又勤勞。
+                    </p>
+
+                    <p>
+                        雖然為了從庫巴手中守護蘑菇王國而努力，但多以失敗收場……
+                        有時也會幫助瑪利歐，或一同踏上冒險旅程。
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- bowser 庫巴 -->
+        <div class="main_bowser text-bk" id="mainBowser">
+            <picture>
+                <img src="./img/bowser-unstack-closed.png" class="img-fluid mainBowserImg" id="mainBowserImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_bowser">
+                <button onclick="expand('Bowser')" class="main_character_btn" id="bowserBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Koopa</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowBowser_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowBowser_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="bowser_introduce" style="display: none;" class="text-left">
+                    <p>
+                        破壞世界和平的龜族大魔王，是瑪利歐與夥伴的永遠宿敵。
+                    </p>
+                    <p>
+                        雖然多次帶領慢慢龜、栗寶寶、炮彈刺客和嘿呵等眾多手下侵襲蘑菇王國，<br>
+                        但每次都被瑪利歐阻止而失敗……
+                    </p>
+                    <p>
+                        庫巴力大無窮，
+                        口吐的火焰更是氣勢非凡。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Yoshi -->
+        <div class="main_yoshi text-wh" id="mainYoshi">
+            <picture>
+                <img src="./img/yoshi-unstack-closed.png" class="img-fluid mainYoshiImg" id="mainYoshiImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_yoshi">
+                <button onclick="expand('Yoshi')" class="main_character_btn" id="yoshiBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Yoshi</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowYoshi_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowYoshi_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="yoshi_introduce" style="display: none;" class="text-left">
+                    <p>
+                        來自「耀西島」，瑪利歐的可靠夥伴。<br>
+                        性格溫柔且有點慵懶。
+                    </p>
+                    <p>
+                        引以為傲的長舌頭可以將水果或敵人整個吞下再變成蛋。
+                    </p>
+                    <p>
+                        除了綠色外，還有紅色、粉藍色和粉紅色等不同顏色的耀西。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Daisy -->
+        <div class="main_daisy text-wh" id="mainDaisy">
+            <picture>
+                <img src="./img/daisy-unstack-closed.png" class="img-fluid mainDaisyImg" id="mainDaisyImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_daisy">
+                <button onclick="expand('Daisy')" class="main_character_btn" id="daisyBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Daisy</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowDaisy_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowDaisy_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="daisy_introduce" style="display: none;" class="text-left">
+                    <p>
+                        來自名為サラサランド國家的公主。<br>
+                        標誌是黃色長裙和花朵形狀的飾物。
+                    </p>
+
+                    <p>
+                        個性開朗又有活力，也有點調皮。
+                    </p>
+                    <p>
+                        常和瑪利歐及其他夥伴一起體驗運動的樂趣。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wario -->
+        <div class="main_wario text-bk" id="mainWario">
+            <picture>
+                <img src="./img/wario-unstack-closed.png" class="img-fluid mainWarioImg" id="mainWarioImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_wario">
+                <button onclick="expand('Wario')" class="main_character_btn" id="warioBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Wario</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowWario_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowWario_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="wario_introduce" style="display: none;" class="text-left">
+                    <p>
+                        自稱與瑪利歐是童年好友的最強勁競對手。<br>
+                        性格豪爽兼不拘小節。
+                    </p>
+
+                    <p>
+                        他頭戴黃色帽子配紫色的吊帶工作褲，還有標誌性的鋸齒鬍子。
+                    </p>
+
+                    <p>
+                        喜歡的食物是大蒜，最愛是賺錢。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Waluigi -->
+        <div class="main_waluigi text-wh" id="mainWaluigi">
+            <picture>
+                <img src="./img/waluigi-unstack-closed.png" class="img-fluid mainWaluigiImg" id="mainWaluigiImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_waluigi">
+                <button onclick="expand('Waluigi')" class="main_character_btn" id="waluigiBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Waluigi</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowWaluigi_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowWaluigi_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="waluigi_introduce" style="display: none;" class="text-left">
+                    <p>
+                        瓦利歐的搭檔，視路易吉為勁敵。
+                    </p>
+
+                    <p>
+                        為了與瑪利歐和路易吉對決，會躲起來鍛鍊，<br>
+                        由此可以看出他為人努力的一面。
+                    </p>
+
+                    <p>
+                        也會活用手腳修長的優點，活躍於各種運動。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rosalina -->
+        <div class="main_rosalina text-bk" id="mainRosalina">
+            <picture>
+                <img src="./img/rosalina-unstack-closed.png" class="img-fluid mainRosalinaImg" id="mainRosalinaImg">
+            </picture>
+
+            <div class="characters_text_frame" id="characters_text_frame_rosalina">
+                <button onclick="expand('Rosalina')" class="main_character_btn" id="rosalinaBtn">
+                    <div class="main_character_text">
+                        <p class="h2">Rosetta</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 32 46" width="40" height="40" fill="none">
+                        <g stroke="white" stroke-width="18" id="arrowRosalina_1">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+
+                        <g stroke="black" stroke-width="7" id="arrowRosalina_2">
+                            <path d="M30 12 L16 24 2 12" />
+                        </g>
+                    </svg>
+
+                </button>
+
+                <!-- 角色介紹 -->
+                <div id="rosalina_introduce" style="display: none;" class="text-left">
+                    <p>
+                        與星星之子「奇可」一起在宇宙旅行，是一位充滿謎團的女性。
+                    </p>
+
+                    <p>
+                        外表看似冷淡，其實性格善良，一直像母親般照顧沒有父母的奇可他們。
+                    </p>
+
+                    <p>
+                        也會與瑪利歐及其夥伴一同前往冒險。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 角色 Card 結束 -->
+
+
+    <div class="footer-characters">
+        <img src="./img/footer-characters.png" class="img-fluid">
+    </div>
+
+
+    <!-- footer -->
+    <!-- <hr> -->
+    <div class="bg-slash-footer bg-MarioRed"></div>
+    <div class="dotted-line"></div>
+
+
+    <footer class="footer bg-MarioRed text-center text-wh">
+
+        <a href="#" class="h6">
+            <div class="back">
+                Go Top
+            </div>
+        </a>
+
+        <div class="footer_main">
+
+            <div class="contact_us">
+                <div class="h6">Follow Nintendo:</div>
+                <div class="contact_us_logo">
+                    <div><a href="#"><img src="./img/logo-facebook.svg"></a></div>
+                    <div><a href="#"><img src="./img/logo-twitter.svg"></a></div>
+                    <div><a href="#"><img src="./img/logo-youtube.svg"></a></div>
+                    <div><a href="#"><img src="./img/logo-instagram.svg"></a></div>
+                </div>
+
+            </div>
+
+            <div class="certificated">
+                <div>
+                    <img src="./img/footer-e-e10.svg" class="">
+                </div>
+                <div>
+                    <img src="./img/footer-logo-esrb-privacy-certified.svg">
+                </div>
+            </div>
+
+
+        </div>
+
+        <p class="text-wh">
+            <a href="#">Privacy Policy</a>
+            |
+            <a href="#">Terms of Use</a>
+            |
+            <a href="#">Cookie Preferences</a>
+            |
+            <a href="#">Interest-Based Ads</a>
+        </p>
+
+        <p class="h7">--&nbsp;&nbsp;&nbsp;本網頁為練習用，圖片及資料皆參考自 Nitendo 官網&nbsp;&nbsp;&nbsp;--</p>
+
+    </footer>
+
+    <script src="./js/character_expand.js"></script>
+    <script src="./js/menu.js"></script>
+
+</body>
+
+</html>

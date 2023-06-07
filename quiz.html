@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home of Super Mario</title>
+    <link rel="icon" href="./img/icon.ico">
+    <link rel="stylesheet" href="./css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-wh">Mario Quiz</h2>
+        <div class="quiz_frame">
+
+            <div class="quiz_inner">
+                <div class="question_frame" id="frame">
+                    <div id="question_cover">
+                        <img src="./img/M.svg" id="bg_M">
+                        <img src="./img/intro-mario.png" id="introMario">
+                    </div>
+
+                    <div id="question_frame">
+                        <h2 id="question"></h2>
+                        <div id="resultImageArea" style="display: none;">
+                            <img src="./img/result-outro-mario.png" id="resultImg">
+                        </div>
+
+                    </div>
+
+                    <div id="process" class="process" style="display: none;">
+                        <span id="process_text" class="h5"></span>
+                        <div id="process_bar_frame" class="process_bar_frame">
+                            <div id="process_bar" class="process_bar"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div id="answer_frame">
+                    <p class="h3">Choose your difficulty level:</p>
+                    <ul class="quiz_choose_level">
+                        <li>
+                            <button onclick="quiz_initial(false)">Easy</button>
+                        </li>
+                        <li>
+                            <button onclick="quiz_initial(true)">Hard</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="footer bg-MarioRed text-center text-wh">
+        <p class="h6">--&nbsp;&nbsp;&nbsp;本網頁為練習用，圖片及資料皆參考自 Nitendo，請勿轉載&nbsp;&nbsp;&nbsp;--</p>
+    </footer>
+
+    <script src="./js/quiz.js"></script>
+</body>
+
+</html>
